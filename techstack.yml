@@ -1,7 +1,8 @@
 repo_name: jimbrig/espanso-hub
 report_id: 6043e5595440011ec5f24be42f75865b
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-07T20:29:58+00:00'
+timestamp: '2024-01-05T08:28:19+00:00'
 requested_by: QJoly
 provider: github
 branch: main
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/jimbrig/espanso-hub/blob/main/packages/medical-docs/0.1.2/ruby/Gemfile
   detection_source: packages/medical-docs/0.1.2/ruby/Gemfile
   last_updated_by: Federico Terzi
   last_updated_on: 2021-11-20 21:10:09.000000000 Z
@@ -27,6 +29,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/jimbrig/espanso-hub
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -36,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/jimbrig/espanso-hub/blob/main/.github/workflows/pr-quality-check.yml
   detection_source: ".github/workflows/pr-quality-check.yml"
   last_updated_by: Federico Terzi
   last_updated_on: 2022-05-11 22:16:09.000000000 Z
@@ -47,6 +51,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/jimbrig/espanso-hub/blob/main/packages/medical-docs/0.1.2/ruby/Gemfile
   detection_source: packages/medical-docs/0.1.2/ruby/Gemfile
   last_updated_by: Federico Terzi
   last_updated_on: 2021-11-20 21:10:09.000000000 Z
@@ -59,6 +64,7 @@ tools:
   category: Libraries
   sub_category: RubyGems Packages
   image_url: https://img.stackshare.io/package/19263/default_49dad526da0ba61823aa00455104e813d167271d.png
+  detection_source_url: https://github.com/jimbrig/espanso-hub/blob/main/packages/medical-docs/0.1.2/ruby/Gemfile
   detection_source: packages/medical-docs/0.1.2/ruby/Gemfile
   last_updated_by: Federico Terzi
   last_updated_on: 2021-11-20 21:10:09.000000000 Z
@@ -71,6 +77,7 @@ tools:
   category: Libraries
   sub_category: RubyGems Packages
   image_url: https://img.stackshare.io/package/18899/default_4bb00167954f5d9dd5673b34db3ced31ee000cb4.png
+  detection_source_url: https://github.com/jimbrig/espanso-hub/blob/main/packages/medical-docs/0.1.2/ruby/Gemfile
   detection_source: packages/medical-docs/0.1.2/ruby/Gemfile
   last_updated_by: Federico Terzi
   last_updated_on: 2021-11-20 21:10:09.000000000 Z
