@@ -9,7 +9,7 @@ matches:
   - trigger: ":nfc-input"
     replace: |-
       Can we put all these inputs into one tuple? That will make sure you're sure that EVERY time everything comes together in the right combination.
-  - trigger: ":nfc-santize"
+  - trigger: ":nfc-sanitize"
     replace: |-
       You can use
       ```
@@ -31,3 +31,16 @@ matches:
   - trigger: ":nfc-join"
     replace: |-
       Please join the nf-core organization on GitHub to enable the CI-tests to run on your PR. You can request to join the organization via #github-invitations in the nf-core slack. You can join the nf-core slack via https://nf-co.re/join.
+  - trigger: ":nfc-one"
+    replace: |-
+      We usually recommend to have one module per PR. That makes the review process easier and its more likely that someone will review your PR. You can keep that in mind for the next PRs.
+  - trigger: ":nfc-topics"
+    replace: |-
+      Can you update the versions output to utilize topics? More information about that can be found in the [docs](https://nf-co.re/docs/tutorials/migrate_to_topics/update_modules).
+  - trigger: ":nfc-snap"
+    replace: |-
+      Can you add other files to this snapshot as well? Ideally we want all outputs to be at least present by name in the snapshot.
+  - trigger: ":nfc-thanks"
+    replace: |-
+      Thank you for your contribution to nf-core! We really appreciate it. I added a few comments to your PR.
+
