@@ -43,4 +43,24 @@ matches:
   - trigger: ":nfc-thanks"
     replace: |-
       Thank you for your contribution to nf-core! We really appreciate it. I added a few comments to your PR.
-
+  - trigger: ":nfc-stub"
+    replace: |-
+      You can use
+      ```
+      { assert snapshot(sanitizeOutput(process.out)).match() }
+      ```
+      for the stub assertion. It should not be necessary to do any other assertions in the stub test.
+  - trigger: ":nfc-name"
+    replace: |-
+      According to the [module specifications](https://nf-co.re/docs/guidelines/components/modules#naming-conventions) we want the module name to be reflected in the process name. In this case 
+  - trigger: ":nfc-outname"
+    replace: |-
+      We want to let the module user decide about the output file naming in their pipeline via `ext-prefix`. So ideally the output filenames are just `${prefix}`.
+  - trigger: ":prtodo"
+    replace: "-commenter:@me -review:changes-requested"
+  - trigger: ":nfc-forceone"
+    replace: |-
+      Thank you for your contribution! Can you please split up your PR into one PR per module / subworkflow. These are too many files to be reviewed at once.
+  - trigger: ":nfc-conf"
+    replace: |-
+      You can change and adjust parameter with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
