@@ -1,0 +1,30 @@
+matches:
+  - trigger: ":nfc-lint"
+    replace: |-
+      You can run
+      ```bash
+      nextflow lint -format -sort-declarations -spaces 4 -harshil-alignment
+      ```
+      on this file to clean this up nicely.
+  - trigger: ":nfc-input"
+    replace: |-
+      Can we put all these inputs into one tuple? That will make sure you're sure that EVERY time everything comes together in the right combination.
+  - trigger: ":nfc-santize"
+    replace: |-
+      You can use
+      ```
+      { assert snapshot(sanitizeOutput(process.out)).match() }
+      ```
+      to clean up the snapshot using [nft-utils](https://github.com/nf-core/nft-utils). It is used to clean process and workflow outputs by removing the numbered keys. This will create snapshots that are more easy to read by humans.
+  - trigger: ":nfc-versions"
+    replace: |-
+      If you want to collect the versions with the new topic output you can use the following expression:
+      ```
+      process.out.findAll { key, val -> key.startsWith('versions') }
+      ````
+  - trigger: ":nfc-extargs"
+    replace: |-
+      We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [docs](https://nf-co.re/docs/guidelines/components/modules#configuration-of-extargs-in-tests) for more info.
+  - trigger: ":nfc-docker"
+    replace: |-
+      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs]( https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
