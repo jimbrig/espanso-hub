@@ -28,3 +28,6 @@ matches:
   - trigger: ":nfc-docker"
     replace: |-
       We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs]( https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
+  - trigger: ":nfc-join"
+    replace: |-
+      Please join the nf-core organization on GitHub to enable the CI-tests to run on your PR. You can request to join the organization via #github-invitations in the nf-core slack. You can join the nf-core slack via https://nf-co.re/join.
