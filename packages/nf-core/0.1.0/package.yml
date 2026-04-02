@@ -66,7 +66,10 @@ matches:
       You can change and adjust parameter with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
   - trigger: ":nfc-nftbam"
     replace: |-
-      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file.
+      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file. The function `.getReadsMD5()` is useful if your md5sum of the whole file is instable because of changes in the header. 
   - trigger: ":nfc-nftvcf"
     replace: |-
       You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file.
+  - trigger: ":nfc-info"
+    replace: |-
+      Can you please provide more information? We need the `nextflow.log` file, ideally your `samplesheet.csv` and the command you used to run the pipeline to properly investigate.
