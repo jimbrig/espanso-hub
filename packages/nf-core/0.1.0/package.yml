@@ -64,3 +64,9 @@ matches:
   - trigger: ":nfc-conf"
     replace: |-
       You can change and adjust parameter with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
+  - trigger: ":nfc-nftbam"
+    replace: |-
+      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file.
+  - trigger: ":nfc-nftvcf"
+    replace: |-
+      You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file.
