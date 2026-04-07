@@ -19,7 +19,7 @@ matches:
 
   - trigger: ":nfc-input"
     replace: |-
-      Can we put all these inputs into one tuple? That will make sure you're sure that EVERY time everything comes together in the right combination.
+      Can we put all these inputs into one tuple? That will make sure you're sure that everything comes together in the right combination.
 
   - trigger: ":nfc-outname"
     replace: |-
