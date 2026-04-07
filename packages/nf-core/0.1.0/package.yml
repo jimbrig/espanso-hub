@@ -31,14 +31,14 @@ matches:
 
   - trigger: ":nfc-conf"
     replace: |-
-      You can change and adjust parameter with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
+      You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
 
   - trigger: ":nfc-versions"
     replace: |-
       If you want to collect the versions with the new topic output you can use the following expression:
       ```
       process.out.findAll { key, val -> key.startsWith('versions') }
-      ````
+      
 
   - trigger: ":nfc-topics"
     replace: |-
@@ -53,7 +53,7 @@ matches:
       ```
       { assert snapshot(sanitizeOutput(process.out)).match() }
       ```
-      to clean up the snapshot using [nft-utils](https://github.com/nf-core/nft-utils). It is used to clean process and workflow outputs by removing the numbered keys. This will create snapshots that are more easy to read by humans.
+      to clean up the snapshot using [nft-utils](https://github.com/nf-core/nft-utils). It is used to clean process and workflow outputs by removing the numbered keys. This will create snapshots that are easier to read by humans.
 
   - trigger: ":nfc-snap"
     replace: |-
@@ -69,7 +69,7 @@ matches:
 
   - trigger: ":nfc-nftbam"
     replace: |-
-      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file. The function `.getReadsMD5()` is useful if your md5sum of the whole file is instable because of changes in the header.
+      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file. The function `.getReadsMD5()` is useful if your md5sum of the whole file is unstable because of changes in the header.
 
   - trigger: ":nfc-nftvcf"
     replace: |-
@@ -80,7 +80,7 @@ matches:
   # ============================================================================
   - trigger: ":nfc-docker"
     replace: |-
-      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs]( https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
+      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
 
   # ============================================================================
   # Community & Contribution Guidelines
@@ -91,7 +91,7 @@ matches:
 
   - trigger: ":nfc-one"
     replace: |-
-      We usually recommend to have one module per PR. That makes the review process easier and its more likely that someone will review your PR. You can keep that in mind for the next PRs.
+      We usually recommend to have one module per PR. That makes the review process easier and it is more likely that someone will review your PR. You can keep that in mind for the next PRs.
 
   - trigger: ":nfc-forceone"
     replace: |-
