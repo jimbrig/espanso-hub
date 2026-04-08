@@ -1,0 +1,119 @@
+matches:
+  # ============================================================================
+  # Code Quality & Linting
+  # ============================================================================
+  - trigger: ":nfc-lint"
+    replace: |-
+      You can run
+      ```bash
+      nextflow lint -format -sort-declarations -spaces 4 -harshil-alignment
+      ```
+      on this file to clean this up nicely.
+
+  # ============================================================================
+  # Module Development & Configuration
+  # ============================================================================
+  - trigger: ":nfc-name"
+    replace: |-
+      According to the [module specifications](https://nf-co.re/docs/guidelines/components/modules#naming-conventions) we want the module name to be reflected in the process name. In this case
+
+  - trigger: ":nfc-input"
+    replace: |-
+      Can we put all these inputs into one tuple? That will make sure you're sure that everything comes together in the right combination.
+
+  - trigger: ":nfc-outname"
+    replace: |-
+      We want to let the module user decide about the output file naming in their pipeline via `ext-prefix`. So ideally the output filenames are just `${prefix}`.
+
+  - trigger: ":nfc-ont"
+    replace: |-
+      Can you please add ontologies to the meta map?
+
+  - trigger: ":nfc-extargs"
+    replace: |-
+      We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [docs](https://nf-co.re/docs/guidelines/components/modules#configuration-of-extargs-in-tests) for more info.
+
+  - trigger: ":nfc-conf"
+    replace: |-
+      You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
+
+  - trigger: ":nfc-versions"
+    replace: |-
+      If you want to collect the versions with the new topic output you can use the following expression:
+      ```
+      process.out.findAll { key, val -> key.startsWith('versions') }
+      
+
+  - trigger: ":nfc-topics"
+    replace: |-
+      Can you update the versions output to utilize topics? More information about that can be found in the [docs](https://nf-co.re/docs/tutorials/migrate_to_topics/update_modules).
+
+  # ============================================================================
+  # Testing & Snapshots
+  # ============================================================================
+  - trigger: ":nfc-sanitize"
+    replace: |-
+      You can use
+      ```
+      { assert snapshot(sanitizeOutput(process.out)).match() }
+      ```
+      to clean up the snapshot using [nft-utils](https://github.com/nf-core/nft-utils). It is used to clean process and workflow outputs by removing the numbered keys. This will create snapshots that are easier to read by humans.
+
+  - trigger: ":nfc-snap"
+    replace: |-
+      Can you add other files to this snapshot as well? Ideally we want all outputs to be at least present by name in the snapshot.
+
+  - trigger: ":nfc-stub"
+    replace: |-
+      You can use
+      ```
+      { assert snapshot(sanitizeOutput(process.out)).match() }
+      ```
+      for the stub assertion. It should not be necessary to do any other assertions in the stub test.
+
+  - trigger: ":nfc-nftbam"
+    replace: |-
+      You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file. The function `.getReadsMD5()` is useful if your md5sum of the whole file is unstable because of changes in the header.
+
+  - trigger: ":nfc-nftvcf"
+    replace: |-
+      You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file.
+
+  # ============================================================================
+  # Infrastructure & Tools
+  # ============================================================================
+  - trigger: ":nfc-docker"
+    replace: |-
+      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
+
+  # ============================================================================
+  # Community & Contribution Guidelines
+  # ============================================================================
+  - trigger: ":nfc-join"
+    replace: |-
+      Please join the nf-core organization on GitHub to enable the CI-tests to run on your PR. You can request to join the organization via #github-invitations in the nf-core slack. You can join the nf-core slack via https://nf-co.re/join.
+
+  - trigger: ":nfc-one"
+    replace: |-
+      We usually recommend to have one module per PR. That makes the review process easier and it is more likely that someone will review your PR. You can keep that in mind for the next PRs.
+
+  - trigger: ":nfc-forceone"
+    replace: |-
+      Thank you for your contribution! Can you please split up your PR into one PR per module / subworkflow. These are too many files to be reviewed at once.
+
+  - trigger: ":nfc-thanks"
+    replace: |-
+      Thank you for your contribution to nf-core! We really appreciate it. I added a few comments to your PR.
+
+  # ============================================================================
+  # Debugging & Support
+  # ============================================================================
+  - trigger: ":nfc-info"
+    replace: |-
+      Can you please provide more information? We need the `nextflow.log` file, ideally your `samplesheet.csv` and the command you used to run the pipeline to properly investigate.
+
+  # ============================================================================
+  # GitHub Tools
+  # ============================================================================
+  - trigger: ":prtodo"
+    replace: "-commenter:@me -review:changes-requested"
