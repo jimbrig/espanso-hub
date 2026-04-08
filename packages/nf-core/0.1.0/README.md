@@ -37,6 +37,7 @@ Type `:nfc-` in any text field where Espanso is active (for example GitHub or Sl
 - `:nfc-name` -> Requests process naming aligned with nf-core module naming conventions.
 - `:nfc-input` -> Suggests combining inputs into a single tuple for correct pairing.
 - `:nfc-outname` -> Recommends output naming via `ext-prefix` using `${prefix}`.
+- `:nfc-ont` -> Request to add ontologies to the meta map.
 - `:nfc-extargs` -> Asks to include `ext.args` in `main.nf.test` with a docs reference.
 - `:nfc-conf` -> Points to using custom config files for parameter/tool argument adjustments.
 - `:nfc-versions` -> Provides a `process.out.findAll { key, val -> key.startsWith('versions') }` snippet for versions outputs.

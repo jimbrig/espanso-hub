@@ -25,6 +25,10 @@ matches:
     replace: |-
       We want to let the module user decide about the output file naming in their pipeline via `ext-prefix`. So ideally the output filenames are just `${prefix}`.
 
+  - trigger: ":nfc-ont"
+    replace: |-
+      Can you please add ontologies to the meta map?
+
   - trigger: ":nfc-extargs"
     replace: |-
       We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [docs](https://nf-co.re/docs/guidelines/components/modules#configuration-of-extargs-in-tests) for more info.
