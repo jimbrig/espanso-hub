@@ -34,22 +34,23 @@ Type `:nfc-` in any text field where Espanso is active (for example GitHub or Sl
 
 ### Module development and configuration
 
-- `:nfc-name` -> Requests process naming aligned with nf-core module naming conventions.
-- `:nfc-input` -> Suggests combining inputs into a single tuple for correct pairing.
-- `:nfc-outname` -> Recommends output naming via `ext-prefix` using `${prefix}`.
-- `:nfc-ont` -> Request to add ontologies to the meta map.
-- `:nfc-extargs` -> Asks to include `ext.args` in `main.nf.test` with a docs reference.
 - `:nfc-conf` -> Points to using custom config files for parameter/tool argument adjustments.
-- `:nfc-versions` -> Provides a `process.out.findAll { key, val -> key.startsWith('versions') }` snippet for versions outputs.
+- `:nfc-extargs` -> Asks to include `ext.args` in `main.nf.test` with a docs reference.
+- `:nfc-input` -> Suggests combining inputs into a single tuple for correct pairing.
+- `:nfc-name` -> Requests process naming aligned with nf-core module naming conventions.
+- `:nfc-ont` -> Request to add ontologies to the meta map.
+- `:nfc-outname` -> Recommends output naming via `ext-prefix` using `${prefix}`.
 - `:nfc-topics` -> Requests migrating versions output to topics with docs link.
+- `:nfc-versions` -> Provides a `process.out.findAll { key, val -> key.startsWith('versions') }` snippet for versions outputs.
 
 ### Testing and snapshots
 
+- `:nfc-clean` -> Inserts a GitHub `suggestion` block with `snapshot(sanitizeOutput(process.out)).match()`.
+- `:nfc-nftbam` -> Recommends `nft-bam` checks, including `.getReadsMD5()` for unstable whole-file md5s.
+- `:nfc-nftvcf` -> Recommends using `nft-vcf` to validate VCF content.
 - `:nfc-sanitize` -> Suggests `snapshot(sanitizeOutput(process.out)).match()` for cleaner snapshots via `nft-utils`.
 - `:nfc-snap` -> Requests additional output files to be included in snapshots.
 - `:nfc-stub` -> Suggests `snapshot(sanitizeOutput(process.out)).match()` specifically for stub assertions.
-- `:nfc-nftbam` -> Recommends `nft-bam` checks, including `.getReadsMD5()` for unstable whole-file md5s.
-- `:nfc-nftvcf` -> Recommends using `nft-vcf` to validate VCF content.
 
 ### Infrastructure and tools
 
@@ -57,17 +58,19 @@ Type `:nfc-` in any text field where Espanso is active (for example GitHub or Sl
 
 ### Community and contribution guidelines
 
+- `:nfc-forceone` -> Requests splitting large PRs into one PR per module/subworkflow.
 - `:nfc-join` -> Asks contributors to join the nf-core GitHub org to enable CI on PRs.
 - `:nfc-one` -> Recommends one module per PR for easier review.
-- `:nfc-forceone` -> Requests splitting large PRs into one PR per module/subworkflow.
 - `:nfc-thanks` -> Posts a thank-you note and indicates review comments were added.
 
 ### Debugging and support
 
 - `:nfc-info` -> Requests `nextflow.log`, sample sheet, and run command for troubleshooting.
 
-### Additional trigger in this package
+### GitHub tools
 
+- `:nfc-newtemp` -> Suggests restarting from the latest module template using `nf-core m create`.
+- `:nfc-prclose` -> Closing message for inactive pull requests with reopen/new PR guidance.
 - `:prtodo` -> Expands to `-commenter:@me -review:changes-requested` (GitHub PR search filter).
 
 ## Typical usage

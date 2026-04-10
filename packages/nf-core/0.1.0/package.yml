@@ -15,7 +15,7 @@ matches:
   # ============================================================================
   - trigger: ":nfc-name"
     replace: |-
-      According to the [module specifications](https://nf-co.re/docs/guidelines/components/modules#naming-conventions) we want the module name to be reflected in the process name. In this case
+      According to the [module specifications](https://nf-co.re/docs/specifications/components/modules/naming-conventions) we want the module name to be reflected in the process name. In this case
 
   - trigger: ":nfc-input"
     replace: |-
@@ -31,22 +31,22 @@ matches:
 
   - trigger: ":nfc-extargs"
     replace: |-
-      We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [docs](https://nf-co.re/docs/guidelines/components/modules#configuration-of-extargs-in-tests) for more info.
+      We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [module specifications](https://nf-co.re/docs/specifications/components/modules/testing#configuration-of-extargs-in-tests) for more info.
 
   - trigger: ":nfc-conf"
     replace: |-
-      You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/usage/getting_started/configuration#understanding-and-modifying-tool-arguments) for more info.
+      You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/running/configuration/configuration-options#custom-configuration-files) for more info.
 
   - trigger: ":nfc-versions"
     replace: |-
       If you want to collect the versions with the new topic output you can use the following expression:
       ```
       process.out.findAll { key, val -> key.startsWith('versions') }
-      
+      ```
 
   - trigger: ":nfc-topics"
     replace: |-
-      Can you update the versions output to utilize topics? More information about that can be found in the [docs](https://nf-co.re/docs/tutorials/migrate_to_topics/update_modules).
+      Can you update the versions output to utilize topics? More information about that can be found in the [docs](https://nf-co.re/docs/developing/migration-guides/update-pipelines).
 
   # ============================================================================
   # Testing & Snapshots
@@ -79,12 +79,18 @@ matches:
     replace: |-
       You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file.
 
+  - trigger: ":nfc-clean"
+    replace: |-
+      ```suggestion
+                      { assert snapshot(sanitizeOutput(process.out)).match() }
+      ```
+
   # ============================================================================
   # Infrastructure & Tools
   # ============================================================================
   - trigger: ":nfc-docker"
     replace: |-
-      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/guidelines/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
+      We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/specifications/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack.
 
   # ============================================================================
   # Community & Contribution Guidelines
@@ -117,3 +123,11 @@ matches:
   # ============================================================================
   - trigger: ":prtodo"
     replace: "-commenter:@me -review:changes-requested"
+
+  - trigger: ":nfc-newtemp"
+    replace: |-
+      The module template has changed a lot since this PR was opened. I would advise to start with a new PR using the latest module template by running `nf-core m create`. That will make sure that you are up to date with the latest changes and it will be easier to review and merge your PR.
+
+  - trigger: ":nfc-prclose"
+    replace: |-
+      I am closing this Pull Request due to inactivity. If you want to continue working on this, either reopen the PR or open a new PR and reference this one.
