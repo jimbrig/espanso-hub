@@ -82,7 +82,7 @@ matches:
             - label: "nft-bam checks"
               id: "You can use [`nft-bam`](https://nvnieuwk.github.io/nft-bam/latest/usage/) to assert the content of the BAM file. The function `.getReadsMD5()` is useful if your md5sum of the whole file is unstable because of changes in the header."
             - label: "nft-vcf checks"
-              id: "You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file."
+              id: "You can use [`nft-vcf`](https://github.com/seppinho/nft-vcf) to assert the content of the VCF file. The function `path(process.out.<vcf-out-name>[0][1]).vcf.getVariantsMD5()` is useful to get the md5sum of the variants in the VCF file without being affected by changes in the header or the order of the variants."
             - label: "clean suggestion block"
               id: |-
                 ```suggestion
