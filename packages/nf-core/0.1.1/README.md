@@ -28,50 +28,57 @@ Type `:nfc-` in any text field where Espanso is active (for example GitHub or Sl
 
 ## Available triggers
 
-### Code quality and linting
+This package uses grouped triggers with selection popups.
+Most groups have one descriptive trigger, with aliases only where helpful.
 
-- `:nfc-lint` -> Suggests running `nextflow lint -format -sort-declarations -spaces 4 -harshil-alignment`.
-
-### Module development and configuration
-
-- `:nfc-conf` -> Points to using custom config files for parameter/tool argument adjustments.
-- `:nfc-extargs` -> Asks to include `ext.args` in `main.nf.test` with a docs reference.
-- `:nfc-input` -> Suggests combining inputs into a single tuple for correct pairing.
-- `:nfc-name` -> Requests process naming aligned with nf-core module naming conventions.
-- `:nfc-ont` -> Request to add ontologies to the meta map.
-- `:nfc-outname` -> Recommends output naming via `ext-prefix` using `${prefix}`.
-- `:nfc-topics` -> Requests migrating versions output to topics with docs link.
-- `:nfc-versions` -> Provides a `process.out.findAll { key, val -> key.startsWith('versions') }` snippet for versions outputs.
-
-### Testing and snapshots
-
-- `:nfc-clean` -> Inserts a GitHub `suggestion` block with `snapshot(sanitizeOutput(process.out)).match()`.
-- `:nfc-nftbam` -> Recommends `nft-bam` checks, including `.getReadsMD5()` for unstable whole-file md5s.
-- `:nfc-nftvcf` -> Recommends using `nft-vcf` to validate VCF content.
-- `:nfc-sanitize` -> Suggests `snapshot(sanitizeOutput(process.out)).match()` for cleaner snapshots via `nft-utils`.
-- `:nfc-snap` -> Requests additional output files to be included in snapshots.
-- `:nfc-stub` -> Suggests `snapshot(sanitizeOutput(process.out)).match()` specifically for stub assertions.
-
-### Infrastructure and tools
-
-- `:nfc-docker` -> Recommends uploading custom containers to nf-core `quay.io` and requesting via `#request-core`.
-
-### Community and contribution guidelines
-
-- `:nfc-forceone` -> Requests splitting large PRs into one PR per module/subworkflow.
-- `:nfc-join` -> Asks contributors to join the nf-core GitHub org to enable CI on PRs.
-- `:nfc-one` -> Recommends one module per PR for easier review.
-- `:nfc-thanks` -> Posts a thank-you note and indicates review comments were added.
-
-### Debugging and support
-
-- `:nfc-info` -> Requests `nextflow.log`, sample sheet, and run command for troubleshooting.
-
-### GitHub tools
-
-- `:nfc-newtemp` -> Suggests restarting from the latest module template using `nf-core m create`.
-- `:nfc-prclose` -> Closing message for inactive pull requests with reopen/new PR guidance.
-- `:prtodo` -> Expands to `-commenter:@me -review:changes-requested` (GitHub PR search filter).
+- `:nfc-lint`
+	- Replacement:
+		- You can run `nextflow lint -format -sort-declarations -spaces 4 -harshil-alignment` on this file to clean this up nicely.
+- `:nfc-modcore`
+	- Possible replacements:
+		- According to the module specifications we want the module name reflected in the process name.
+		- Let the module user decide output naming via `ext-prefix` and use `${prefix}`.
+		- Can you please add ontologies to the meta map?
+		- Can we put all these inputs into one tuple?
+- `:nfc-modconf`
+	- Possible replacements:
+		- Include `ext.args` in `main.nf.test`.
+		- Use a custom configuration file to adjust parameters.
+- `:nfc-versions`
+	- Possible replacements:
+		- Versions expression snippet:
+			- `process.out.findAll { key, val -> key.startsWith('versions') }`
+		- Request to migrate versions output to topics.
+- `:nfc-snap` (alias: `:nfc-test`)
+	- Possible replacements:
+		- Use `snapshot(sanitizeOutput(process.out)).match()` for cleaner snapshots.
+		- Ask to include more files in snapshots.
+		- Use `snapshot(sanitizeOutput(process.out)).match()` for stub assertions.
+		- Use `nft-bam` (including `.getReadsMD5()`) for BAM content assertions.
+		- Use `nft-vcf` for VCF content assertions.
+		- Insert a GitHub ````suggestion```` block with `snapshot(sanitizeOutput(process.out)).match()`.
+- `:nfc-docker`
+	- Replacement:
+		- Recommendation to upload custom docker containers to nf-core quay.io, with docs and `#request-core` reference.
+- `:nfc-contrib`
+	- Possible replacements:
+		- Ask contributor to join the nf-core GitHub organization so CI can run.
+		- Recommend one module per PR.
+		- Ask to split a large PR into one PR per module/subworkflow.
+- `:nfc-thanks`
+	- Possible replacements:
+		- Thank-you note with mention of added review comments.
+		- Thank-you note with guidance to module specs and examples in repository.
+- `:nfc-info`
+	- Replacement:
+		- Request `nextflow.log`, `samplesheet.csv`, and the exact run command.
+- `:prtodo`
+	- Replacement:
+		- `-commenter:@me -review:changes-requested`
+- `:nfc-github` (alias: `:nfc-gh`)
+	- Possible replacements:
+		- Recommend opening a new PR from the latest module template via `nf-core m create`.
+		- Close due to inactivity message with reopen/new PR guidance.
 
 ## Typical usage
 
