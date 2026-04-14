@@ -40,10 +40,7 @@ Most groups have one descriptive trigger, with aliases only where helpful.
 		- Let the module user decide output naming via `ext-prefix` and use `${prefix}`.
 		- Can you please add ontologies to the meta map?
 		- Can we put all these inputs into one tuple?
-- `:nfc-modconf`
-	- Possible replacements:
-		- Include `ext.args` in `main.nf.test`.
-		- Use a custom configuration file to adjust parameters.
+		- If input and output names can overlap, use `task.ext.prefix` to disambiguate (example guard: `if ("${tsv}" == "${prefix}.tsv") ...`).
 - `:nfc-versions`
 	- Possible replacements:
 		- Versions expression snippet:
@@ -57,9 +54,11 @@ Most groups have one descriptive trigger, with aliases only where helpful.
 		- Use `nft-bam` (including `.getReadsMD5()`) for BAM content assertions.
 		- Use `nft-vcf` for VCF content assertions.
 		- Insert a GitHub ````suggestion```` block with `snapshot(sanitizeOutput(process.out)).match()`.
+		- Include `ext.args` in `main.nf.test`.
 - `:nfc-docker`
-	- Replacement:
-		- Recommendation to upload custom docker containers to nf-core quay.io, with docs and `#request-core` reference.
+	- Possible replacements:
+		- Encourage bringing tools to bioconda so docker/singularity containers can be built automatically.
+		- Recommend uploading custom containers to nf-core quay.io and requesting via `#request-core`.
 - `:nfc-contrib`
 	- Possible replacements:
 		- Ask contributor to join the nf-core GitHub organization so CI can run.
@@ -69,9 +68,10 @@ Most groups have one descriptive trigger, with aliases only where helpful.
 	- Possible replacements:
 		- Thank-you note with mention of added review comments.
 		- Thank-you note with guidance to module specs and examples in repository.
-- `:nfc-info`
-	- Replacement:
+- `:nfc-pipeline` (alias: `:nfc-info`)
+	- Possible replacements:
 		- Request `nextflow.log`, `samplesheet.csv`, and the exact run command.
+		- Suggest using a custom configuration file (with docs reference).
 - `:prtodo`
 	- Replacement:
 		- `-commenter:@me -review:changes-requested`

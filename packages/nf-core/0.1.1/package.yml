@@ -24,19 +24,12 @@ matches:
               id: "Can you please add ontologies to the meta map?"
             - label: "tuple inputs"
               id: "Can we put all these inputs into one tuple? That will make sure you're sure that everything comes together in the right combination."
-
-  # Module config and tests
-  - trigger: ":nfc-modconf"
-    replace: "{{nfc_mod_cfg_msg}}"
-    vars:
-      - name: nfc_mod_cfg_msg
-        type: choice
-        params:
-          values:
-            - label: "ext.args in tests"
-              id: "We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [module specifications](https://nf-co.re/docs/specifications/components/modules/testing#configuration-of-extargs-in-tests) for more info."
-            - label: "custom config"
-              id: "You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/running/configuration/configuration-options#custom-configuration-files) for more info."
+            - label: "disambiguate with prefix"
+              id: |-
+                If input and output names can overlap, use `task.ext.prefix` to disambiguate. For example:
+                ```
+                if ("${tsv}" == "${prefix}.tsv") error "Input and output names are the same, use \"task.ext.prefix\" to disambiguate!"
+                ```
 
   # Module versions and topics
   - trigger: ":nfc-versions"
@@ -88,10 +81,21 @@ matches:
                 ```suggestion
                                 { assert snapshot(sanitizeOutput(process.out)).match() }
                 ```
+            - label: "ext.args in tests"
+              id: "We want the ext.args to be present in the main.nf.test file. That makes everything more readable in one go. See the [module specifications](https://nf-co.re/docs/specifications/components/modules/testing#configuration-of-extargs-in-tests) for more info."
 
   # Infrastructure
   - trigger: ":nfc-docker"
-    replace: "We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/specifications/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack."
+    replace: "{{nfc_docker_bioconda}}"
+    vars:
+      - name: nfc_docker_bioconda
+        type: choice
+        params:
+          values:
+            - label: "bioconda"
+              id: "We encourage bringing tools to bioconda. Can you look into that? Then containers for docker and singularity can be automatically built for your tool. See the [docs](https://nf-co.re/docs/specifications/components/modules/software-requirements) for more info."
+            - label: "quay.io"
+              id: "We have a quay.io repository for custom docker containers. It is a recommendation to upload them there so that we stay independent of third parties that might delete the images. See the [docs](https://nf-co.re/docs/specifications/pipelines/recommendations/custom_containers) for more info. You can request the upload via #request-core in the nf-core slack."
 
   # Contribution guidance
   - trigger: ":nfc-contrib"
@@ -121,9 +125,18 @@ matches:
             - label: "thanks with guidance"
               id: "Thank you for your contribution to nf-core! I started with giving some hints that hopefully help with the development of this module :) I think the looking at the [module specifications](https://nf-co.re/docs/guidelines/components/modules) or other modules in this repositorycan be a good starting point for the next steps."
 
-  # Debugging and support
-  - trigger: ":nfc-info"
-    replace: "Can you please provide more information? We need the `nextflow.log` file, ideally your `samplesheet.csv` and the command you used to run the pipeline to properly investigate."
+  # Pipeline related
+  - triggers: [":nfc-pipeline", ":nfc-info"]
+    replace: "{{nfc_pipeline_msg}}"
+    vars:
+      - name: nfc_pipeline_msg
+        type: choice
+        params:
+          values:
+            - label: "request logs and command"
+              id: "Can you please provide more information? We need the `nextflow.log` file, ideally your `samplesheet.csv` and the command you used to run the pipeline to properly investigate."
+            - label: "custom config"
+              id: "You can change and adjust parameters with a custom configuration file. See the [docs](https://nf-co.re/docs/running/configuration/configuration-options#custom-configuration-files) for more info."
 
   # GitHub filters
   - trigger: ":prtodo"
