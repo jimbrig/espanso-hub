@@ -123,7 +123,7 @@ matches:
             - label: "thanks message"
               id: "Thank you for your contribution to nf-core! We really appreciate it. I added a few comments to your PR."
             - label: "thanks with guidance"
-              id: "Thank you for your contribution to nf-core! I started with giving some hints that hopefully help with the development of this module :) I think the looking at the [module specifications](https://nf-co.re/docs/guidelines/components/modules) or other modules in this repositorycan be a good starting point for the next steps."
+              id: "Thank you for your contribution to nf-core! I started with giving some hints that hopefully help with the development of this module :) I think the looking at the [module specifications](https://nf-co.re/docs/guidelines/components/modules) or other modules in this repository can be a good starting point for the next steps."
 
   # Pipeline related
   - triggers: [":nfc-pipeline", ":nfc-info"]
