@@ -1,6 +1,6 @@
 # No
 
-An espanso package to get a random rejection reason from [hotheadhacker's](https://github.com/hotheadhacker/no-as-a-service) API service [naas.isalman.dev/no](naas.isalman.dev/no).
+An espanso package to get a random rejection reason from [hotheadhacker's](https://github.com/hotheadhacker/no-as-a-service) API service [naas.isalman.dev/no](https://naas.isalman.dev/no).
 
 ## Usage
 
@@ -20,5 +20,5 @@ Requires `curl` and `sed`
 
 ## Package Details
 
-Repository: [github.com/nihalxkumar/hub/packages/no](https://github.com/nihalxkumar/hub/packages/no)
+Repository: [github.com/nihalxkumar/hub/tree/no/packages/no/0.1.0](https://github.com/nihalxkumar/hub/tree/no/packages/no/0.1.0)
 
