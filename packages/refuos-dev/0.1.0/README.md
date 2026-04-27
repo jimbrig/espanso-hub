@@ -19,7 +19,8 @@ Git, DevOps tools, Python, and infrastructure — for example:
 Framework-agnostic: works for JavaScript, TypeScript, Python, Go, Java,
 and any other stack. For framework-specific terms (React hooks, Vue
 Composition API, NestJS decorators, Django ORM, etc.) use a local
-dictionary — see `dictionaries/local/README.md`.
+dictionary — see the [project repository](https://github.com/heavybeard/refuos)
+for documentation on local dictionaries.
 
 ## Source
 

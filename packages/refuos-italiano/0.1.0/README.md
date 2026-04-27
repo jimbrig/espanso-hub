@@ -10,7 +10,7 @@ Transpositions, missing double letters, and dropped characters — for example:
 |------------|--------------|
 | `acnhe`    | `anche`      |
 | `comunqeu` | `comunque`   |
-| `perche`   | `perché`     |
+| `probelma` | `problema`   |
 
 ~2,500 rules in total.
 
