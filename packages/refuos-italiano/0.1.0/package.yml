@@ -32,6 +32,13 @@ matches:
     word: true
 
   - triggers:
+    - "acor"
+    - "arco"
+    replace: "acro"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "adeso"
     - "adesos"
     - "adseso"
@@ -70,6 +77,12 @@ matches:
     word: true
 
   - triggers:
+    - "aih"
+    replace: "ahi"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "aitare"
     - "aituare"
     - "aiuare"
@@ -102,8 +115,13 @@ matches:
   - triggers:
     - "alot"
     - "atlo"
-    - "lato"
     replace: "alto"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "aim"
+    replace: "ami"
     propagate_case: true
     word: true
 
@@ -120,9 +138,16 @@ matches:
     word: true
 
   - triggers:
+    - "acne"
+    - "anec"
+    - "nace"
+    replace: "ance"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "ache"
     - "acnhe"
-    - "ance"
     - "anceh"
     - "anhce"
     - "anhe"
@@ -189,10 +214,15 @@ matches:
     word: true
 
   - triggers:
-    - "ano"
     - "anon"
-    - "nano"
     replace: "anno"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "aon"
+    - "nao"
+    replace: "ano"
     propagate_case: true
     word: true
 
@@ -350,6 +380,12 @@ matches:
     word: true
 
   - triggers:
+    - "aiv"
+    replace: "avi"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "abmbino"
     - "babino"
     - "babmino"
@@ -366,8 +402,15 @@ matches:
     word: true
 
   - triggers:
+    - "absa"
+    - "baas"
+    - "bsaa"
+    replace: "basa"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "abssa"
-    - "basa"
     - "basas"
     - "bsasa"
     - "bssa"
@@ -376,7 +419,14 @@ matches:
     word: true
 
   - triggers:
-    - "bela"
+    - "beal"
+    - "blea"
+    - "ebla"
+    replace: "bela"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "belal"
     - "blela"
     - "blla"
@@ -422,9 +472,48 @@ matches:
     word: true
 
   - triggers:
+    - "bnoa"
+    - "boan"
+    - "obna"
+    replace: "bona"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "bnoo"
+    - "boon"
+    - "obno"
+    replace: "bono"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "brta"
+    - "brtua"
+    - "brua"
+    - "bruat"
+    - "burta"
+    - "buta"
+    - "rbuta"
+    replace: "bruta"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "brto"
+    - "brtuo"
+    - "bruo"
+    - "bruot"
+    - "burto"
+    - "buto"
+    - "rbuto"
+    replace: "bruto"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "brtta"
     - "brtuta"
-    - "bruta"
     - "brutat"
     - "burtta"
     - "butta"
@@ -436,7 +525,6 @@ matches:
   - triggers:
     - "brtto"
     - "brtuto"
-    - "bruto"
     - "brutot"
     - "burtto"
     - "butto"
@@ -446,7 +534,6 @@ matches:
     word: true
 
   - triggers:
-    - "bona"
     - "bouna"
     - "buna"
     - "bunoa"
@@ -500,7 +587,6 @@ matches:
     word: true
 
   - triggers:
-    - "bono"
     - "bouno"
     - "buno"
     - "bunoo"
@@ -508,6 +594,13 @@ matches:
     - "buoon"
     - "ubono"
     replace: "buono"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "acio"
+    - "caoi"
+    replace: "caio"
     propagate_case: true
     word: true
 
@@ -576,7 +669,6 @@ matches:
     word: true
 
   - triggers:
-    - "acro"
     - "caor"
     - "crao"
     replace: "caro"
@@ -700,7 +792,6 @@ matches:
     word: true
 
   - triggers:
-    - "caio"
     - "cioa"
     - "icao"
     replace: "ciao"
@@ -895,9 +986,16 @@ matches:
     word: true
 
   - triggers:
+    - "coor"
+    - "croo"
+    - "ocro"
+    replace: "coro"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "copo"
     - "copro"
-    - "coro"
     - "corop"
     - "cropo"
     - "crpo"
@@ -1181,9 +1279,16 @@ matches:
     word: true
 
   - triggers:
+    - "dnoa"
+    - "doan"
+    - "odna"
+    replace: "dona"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "dnna"
     - "dnona"
-    - "dona"
     - "donan"
     - "odnna"
     replace: "donna"
@@ -1468,11 +1573,18 @@ matches:
 
   - triggers:
     - "afnno"
-    - "fano"
     - "fanon"
     - "fnano"
     - "fnno"
     replace: "fanno"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "afno"
+    - "faon"
+    - "fnao"
+    replace: "fano"
     propagate_case: true
     word: true
 
@@ -1485,6 +1597,22 @@ matches:
     word: true
 
   - triggers:
+    - "afri"
+    - "fair"
+    - "frai"
+    replace: "fari"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "afro"
+    - "faor"
+    - "frao"
+    replace: "faro"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "afte"
     - "faet"
     - "ftae"
@@ -1493,8 +1621,15 @@ matches:
     word: true
 
   - triggers:
+    - "afto"
+    - "faot"
+    - "ftao"
+    replace: "fato"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "aftto"
-    - "fato"
     - "fatot"
     - "ftato"
     - "ftto"
@@ -1545,7 +1680,22 @@ matches:
     word: true
 
   - triggers:
-    - "fore"
+    - "foer"
+    - "froe"
+    - "ofre"
+    replace: "fore"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "foir"
+    - "froi"
+    - "ofri"
+    replace: "fori"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "fores"
     - "fose"
     - "fosre"
@@ -1648,7 +1798,6 @@ matches:
     word: true
 
   - triggers:
-    - "fori"
     - "fouri"
     - "fuoi"
     - "fuoir"
@@ -1741,7 +1890,6 @@ matches:
     word: true
 
   - triggers:
-    - "ahi"
     - "hia"
     replace: "hai"
     propagate_case: true
@@ -1900,8 +2048,15 @@ matches:
     word: true
 
   - triggers:
+    - "algo"
+    - "laog"
+    - "lgao"
+    replace: "lago"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "alrgo"
-    - "lago"
     - "lagro"
     - "laro"
     - "larog"
@@ -1926,6 +2081,13 @@ matches:
     - "lsaciare"
     - "lsciare"
     replace: "lasciare"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "laot"
+    - "ltao"
+    replace: "lato"
     propagate_case: true
     word: true
 
@@ -2030,16 +2192,9 @@ matches:
     - "made"
     - "mader"
     - "marde"
-    - "mare"
     - "mdare"
     - "mdre"
     replace: "madre"
-    propagate_case: true
-    word: true
-
-  - triggers:
-    - "ami"
-    replace: "mai"
     propagate_case: true
     word: true
 
@@ -2078,6 +2233,14 @@ matches:
     word: true
 
   - triggers:
+    - "amre"
+    - "maer"
+    - "mrae"
+    replace: "mare"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "emglio"
     - "megilo"
     - "megio"
@@ -2088,6 +2251,14 @@ matches:
     - "mgelio"
     - "mglio"
     replace: "meglio"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "emre"
+    - "meer"
+    - "mree"
+    replace: "mere"
     propagate_case: true
     word: true
 
@@ -2213,7 +2384,6 @@ matches:
     - "molo"
     - "molot"
     - "motlo"
-    - "moto"
     - "omlto"
     replace: "molto"
     propagate_case: true
@@ -2239,10 +2409,32 @@ matches:
     - "mndo"
     - "mnodo"
     - "modno"
-    - "mono"
     - "monod"
     - "omndo"
     replace: "mondo"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "mnoo"
+    - "moon"
+    - "omno"
+    replace: "mono"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "moot"
+    - "mtoo"
+    - "omto"
+    replace: "moto"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "naon"
+    - "nnao"
+    replace: "nano"
     propagate_case: true
     word: true
 
@@ -2550,7 +2742,6 @@ matches:
     - "pade"
     - "pader"
     - "parde"
-    - "pare"
     - "pdare"
     - "pdre"
     replace: "padre"
@@ -2566,6 +2757,14 @@ matches:
     - "pease"
     - "pese"
     replace: "paese"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "apre"
+    - "paer"
+    - "prae"
+    replace: "pare"
     propagate_case: true
     word: true
 
@@ -2646,6 +2845,14 @@ matches:
     word: true
 
   - triggers:
+    - "epro"
+    - "peor"
+    - "preo"
+    replace: "pero"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "ipccolo"
     - "pccolo"
     - "pcicolo"
@@ -2660,6 +2867,12 @@ matches:
     word: true
 
   - triggers:
+    - "ipo"
+    replace: "pio"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "opco"
     - "pcoo"
     - "pooc"
@@ -2669,7 +2882,6 @@ matches:
 
   - triggers:
     - "opi"
-    - "pio"
     replace: "poi"
     propagate_case: true
     word: true
@@ -2725,7 +2937,6 @@ matches:
   - triggers:
     - "pego"
     - "pergo"
-    - "preo"
     - "preog"
     - "prgeo"
     - "prgo"
@@ -3246,6 +3457,14 @@ matches:
     word: true
 
   - triggers:
+    - "asra"
+    - "saar"
+    - "sraa"
+    replace: "sara"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "csrivere"
     - "scirvere"
     - "scivere"
@@ -3357,6 +3576,14 @@ matches:
     word: true
 
   - triggers:
+    - "esna"
+    - "sean"
+    - "snea"
+    replace: "sena"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "esntire"
     - "senire"
     - "senitre"
@@ -3374,7 +3601,6 @@ matches:
 
   - triggers:
     - "esnza"
-    - "sena"
     - "senaz"
     - "seza"
     - "sezna"
@@ -3399,6 +3625,14 @@ matches:
     - "srevizio"
     - "srvizio"
     replace: "servizio"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "este"
+    - "seet"
+    - "stee"
+    replace: "sete"
     propagate_case: true
     word: true
 
@@ -3473,10 +3707,8 @@ matches:
   - triggers:
     - "isete"
     - "seite"
-    - "sete"
     - "siee"
     - "sieet"
-    - "site"
     - "sitee"
     replace: "siete"
     propagate_case: true
@@ -3704,6 +3936,14 @@ matches:
     word: true
 
   - triggers:
+    - "atle"
+    - "tael"
+    - "tlae"
+    replace: "tale"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "atnto"
     - "tano"
     - "tanot"
@@ -3716,8 +3956,15 @@ matches:
     word: true
 
   - triggers:
+    - "etmo"
+    - "teom"
+    - "tmeo"
+    replace: "temo"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "etmpo"
-    - "temo"
     - "temop"
     - "tepmo"
     - "tepo"
@@ -3766,8 +4013,15 @@ matches:
     word: true
 
   - triggers:
+    - "etsa"
+    - "teas"
+    - "tsea"
+    replace: "tesa"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "etsta"
-    - "tesa"
     - "tesat"
     - "teta"
     - "tetsa"
@@ -3809,10 +4063,21 @@ matches:
     word: true
 
   - triggers:
+    - "rtopo"
+    - "topo"
+    - "torpo"
+    - "troo"
+    - "troop"
+    - "trpo"
+    - "trpoo"
+    replace: "tropo"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "rtoppo"
     - "toppo"
     - "torppo"
-    - "tropo"
     - "tropop"
     - "trpopo"
     - "trppo"
@@ -3866,6 +4131,14 @@ matches:
     word: true
 
   - triggers:
+    - "ttuo"
+    - "tuot"
+    - "utto"
+    replace: "tuto"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "tttavia"
     - "ttutavia"
     - "tutatvia"
@@ -3884,7 +4157,6 @@ matches:
   - triggers:
     - "ttto"
     - "ttuto"
-    - "tuto"
     - "tutot"
     - "uttto"
     replace: "tutto"
@@ -3962,19 +4234,19 @@ matches:
     word: true
 
   - triggers:
-    - "avi"
-    - "via"
-    replace: "vai"
-    propagate_case: true
-    word: true
-
-  - triggers:
     - "avnno"
-    - "vano"
     - "vanon"
     - "vnano"
     - "vnno"
     replace: "vanno"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "avno"
+    - "vaon"
+    - "vnao"
+    replace: "vano"
     propagate_case: true
     word: true
 
@@ -4073,14 +4345,27 @@ matches:
     word: true
 
   - triggers:
+    - "evro"
+    - "veor"
+    - "vreo"
+    replace: "vero"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "evrso"
-    - "vero"
     - "veros"
     - "veso"
     - "vesro"
     - "vreso"
     - "vrso"
     replace: "verso"
+    propagate_case: true
+    word: true
+
+  - triggers:
+    - "iva"
+    replace: "via"
     propagate_case: true
     word: true
 

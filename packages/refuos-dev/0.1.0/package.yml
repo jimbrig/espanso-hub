@@ -142,6 +142,7 @@ matches:
   - triggers:
     - "asert"
     - "asesrt"
+    - "asset"
     - "assetr"
     - "assret"
     - "assrt"
@@ -318,6 +319,7 @@ matches:
 
   - triggers:
     - "abdge"
+    - "bade"
     - "badeg"
     - "bagde"
     - "bage"
@@ -347,6 +349,7 @@ matches:
     - "bordr"
     - "bordre"
     - "boredr"
+    - "borer"
     - "brder"
     - "broder"
     - "obrder"
@@ -357,6 +360,7 @@ matches:
   - triggers:
     - "banch"
     - "barnch"
+    - "brach"
     - "bracnh"
     - "branh"
     - "branhc"
@@ -535,6 +539,7 @@ matches:
     - "cloe"
     - "cloen"
     - "colne"
+    - "cone"
     - "lcone"
     replace: "clone"
     propagate_case: true
@@ -734,6 +739,7 @@ matches:
     - "cont"
     - "conts"
     - "cosnt"
+    - "cost"
     - "ocnst"
     replace: "const"
     propagate_case: true
@@ -1132,6 +1138,7 @@ matches:
     word: true
 
   - triggers:
+    - "deign"
     - "deisgn"
     - "desgin"
     - "desgn"
@@ -1547,6 +1554,7 @@ matches:
     word: true
 
   - triggers:
+    - "filer"
     - "filetr"
     - "filtr"
     - "filtre"
@@ -1668,6 +1676,7 @@ matches:
     - "frntend"
     - "fronend"
     - "fronetnd"
+    - "fronted"
     - "frontedn"
     - "frontnd"
     - "frontned"
@@ -1783,6 +1792,7 @@ matches:
     word: true
 
   - triggers:
+    - "gird"
     - "grdi"
     - "rgid"
     replace: "grid"
@@ -2226,6 +2236,7 @@ matches:
     word: true
 
   - triggers:
+    - "lading"
     - "laoding"
     - "loadig"
     - "loadign"
@@ -2554,6 +2565,7 @@ matches:
     - "enutral"
     - "netral"
     - "netural"
+    - "neural"
     - "neurtal"
     - "neutal"
     - "neutarl"
@@ -2716,6 +2728,7 @@ matches:
     - "oultine"
     - "outilne"
     - "outine"
+    - "outlie"
     - "outlien"
     - "outlne"
     - "outlnie"
@@ -3297,6 +3310,7 @@ matches:
 
   - triggers:
     - "erfactor"
+    - "reactor"
     - "reafctor"
     - "refacor"
     - "refacotr"
@@ -3748,6 +3762,14 @@ matches:
     word: true
 
   - triggers:
+    - "iste"
+    - "siet"
+    - "stie"
+    replace: "site"
+    propagate_case: true
+    word: true
+
+  - triggers:
     - "kseleton"
     - "sekleton"
     - "seleton"
@@ -3767,6 +3789,7 @@ matches:
 
   - triggers:
     - "lsider"
+    - "sider"
     - "silder"
     - "slder"
     - "sldier"
@@ -3814,6 +3837,7 @@ matches:
 
   - triggers:
     - "psinner"
+    - "sinner"
     - "sipnner"
     - "spinenr"
     - "spiner"
@@ -3829,6 +3853,7 @@ matches:
     - "psrint"
     - "spint"
     - "spirnt"
+    - "sprit"
     - "spritn"
     - "sprnit"
     - "sprnt"
@@ -3855,6 +3880,7 @@ matches:
     word: true
 
   - triggers:
+    - "sash"
     - "satsh"
     - "stah"
     - "stahs"
@@ -3866,6 +3892,7 @@ matches:
     word: true
 
   - triggers:
+    - "sate"
     - "satte"
     - "stae"
     - "staet"
@@ -3925,6 +3952,7 @@ matches:
   - triggers:
     - "sring"
     - "srting"
+    - "sting"
     - "stirng"
     - "strig"
     - "strign"
@@ -4096,6 +4124,7 @@ matches:
     - "hteme"
     - "tehme"
     - "teme"
+    - "thee"
     - "theem"
     - "thme"
     - "thmee"
@@ -4140,6 +4169,7 @@ matches:
     - "toat"
     - "toats"
     - "tosat"
+    - "tost"
     replace: "toast"
     propagate_case: true
     word: true
